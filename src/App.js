@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import "./styles.css";
 
 class App extends Component {
-  constructor() {
-    super();
-
+  // Added props to constructor -> super -> this.props to access props within constructor
+  constructor(props) {
+    super(props);
     this.state = {
-      number: 0
+      // Accessing this.props.increment via props from constructor and super
+      number: 47 + this.props.increment
     };
   }
 
