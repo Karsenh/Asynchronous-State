@@ -13,7 +13,7 @@ class App extends Component {
   handleClick = () => {
     this.setState(
       (prevState, prevProps) => {
-        return { number: prevState.number + 1 };
+        return { number: prevState.number + prevProps.increment };
       },
       () => console.log(this.state.number)
     );
